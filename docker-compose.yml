@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+
+  hellosignpoc:
+    build: .
+    image: hellosignpoc
+    container_name: hellosignpoc
+    volumes:
+      - ./app:/app
+    ports:
+      - 5000:5000
+    restart: always
+    command: python /app/app.py
